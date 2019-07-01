@@ -1,0 +1,26 @@
+{
+  "name": "koa-prevue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuanxiangweidehithub/koa-prevue.git"
+  },
+  "keywords": [
+    "movie"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuanxiangweidehithub/koa-prevue/issues"
+  },
+  "homepage": "https://github.com/yuanxiangweidehithub/koa-prevue#readme",
+  "dependencies": {
+    "koa": "^2.7.0"
+  }
+}
