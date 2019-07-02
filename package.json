@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/yuanxiangweidehithub/koa-prevue#readme",
   "dependencies": {
+    "ejs": "^2.6.2",
     "koa": "^2.7.0"
   }
 }
