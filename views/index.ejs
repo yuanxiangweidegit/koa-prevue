@@ -1,0 +1,55 @@
+<% include ./layouts/default %>
+<div>121221</div>
+<div>121221</div>
+
+<div>121221</div>
+<img src="https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2558293106.webp" data-video='http://vt1.doubanio.com/201907031800/ae918cb86a34d701270bc07826f6d064/view/movie/M/301450233.mp4' alt="" />
+<h1>中文<%= name %></h1>
+
+
+<div class="modal fade" tabindex="-1" id='dd' role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+<div id="videoModal">
+	
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var player = null
+	$(document).ready(function(){
+		$('#dd').on('hidden.bs.modal',function(){
+			if(player&&player.pause) player.pause()
+		})
+		$('img').click(function(){
+				console.log($('img').data('video'),8888)
+			$('#dd').modal('show')
+				var url = $('img').data('video')
+		var img = $('img').attr('src')
+		if(!player){
+			player = new DPlayer({
+				container:document.getElementById('videoModal'),
+				video:{
+					url:url,
+					pic:img,
+					thumbnails:img
+				}
+			})
+		}else{
+			player.switchVideo({
+				url:url,
+				pic:img,
+					thumbnails:img
+			})
+		}
+		})
+	
+	
+	})
+</script>
+</body>
+</html>
